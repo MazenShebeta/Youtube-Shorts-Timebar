@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Youtube Shorts Timebar",
+  "description": "Adds a timebar to Youtube Shorts that lets you navigate to any point in the video.",
+  "default_locale": "en",
+  "version": "1.0",
+  "author": "Mazen Shebeta",
+  "permissions": ["https://www.youtube.com/", "webNavigation","tabs"],
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_icon":{
+        "32":"icons/icon32.png",
+        "64":"icons/icon48.png",
+        "128":"icons/icon128.png"
+    },
+    "default_title": "Youtube Shorts Timebar",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/shorts/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "externally_connectable": {
+    "matches": ["*://*.youtube.com/*"]
+  }
+}

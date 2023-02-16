@@ -1,0 +1,52 @@
+body{
+    background-color: #0d1117;
+}
+
+.container{
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 250px;
+}
+
+#logo{
+    height: 50px;
+    margin: auto;
+}
+
+.header{
+    color: aliceblue;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.author{
+    color: rgb(126, 126, 126);
+    text-align: center;
+}
+
+.main{
+    color: aliceblue;
+    text-align: center;
+    margin-top: 0px;
+}
+
+button{
+    background-color: #4e4e4e;
+    color: aliceblue;
+    border: none;
+    /* border-radius: 5px; */
+    /* padding: 10px; */
+    margin: 10px;
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #2f2f2f;
+    transition: 200ms ease-in-out;
+}
