@@ -4,7 +4,7 @@ timeBar.style.width = "100%";
 timeBar.style.height = "10px";
 timeBar.style.bottom = "0px";
 timeBar.style.left = "0px";
-timeBar.style.position = "absolute";
+timeBar.style.position = "fixed";
 timeBar.style.backgroundColor = "black";
 timeBar.style.zIndex = "9999";
 timeBar.style.opacity = "0.8";
@@ -23,6 +23,7 @@ progress.style.height = "100%";
 progress.style.backgroundColor = "red";
 progress.style.transitionDuration = "0.2s";
 progress.style.transitionProperty = "width";
+progress.style.position = "-webkit-sticky";
 
 timeBar.appendChild(progress);
 
