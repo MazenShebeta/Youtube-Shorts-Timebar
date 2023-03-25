@@ -1,3 +1,14 @@
+document.addEventListener('spfdone ', function(e) {
+  console.log('spfdone');
+});
+
+window.addEventListener('yt-page-data-updated', function () {
+  console.log('yt-page-data-updated');
+});
+
+
+
+
 const timeBar = document.createElement("div");
 timeBar.id = "timeBar";
 timeBar.style.width = "100%";
