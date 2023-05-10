@@ -4,8 +4,17 @@ Youtube Shorts Timebar is a Chrome extension that lets you navigate Youtube shor
 
 ## Installation
 
-Simply download the folder and use the "Locate Unpacked" in the "Manage extensions" in Chrome.
+* Download the ZIP file, and extract its content.
 
+* Open the Chrome browser and go to the Extensions page. You can access this page by clicking on the three dots in the upper-right corner of the browser window and selecting "More tools" > "Extensions".
+
+* Enable Developer mode by toggling the switch in the upper-right corner of the Extensions page.
+
+* Drag and drop the folder you just extracted earlier onto the Extensions page. Alternatively, you can click on the "Load unpacked" button in the upper-left corner of the Extensions page and select the folder containing the extracted extension files.
+
+* A confirmation dialog box will appear, asking you if you want to add the extension. Click "Add extension" to confirm.
+
+* The extension should now be installed and ready to use. You can access it by clicking on its icon in the Chrome toolbar.
 
 ## Next Step
 There's currently a problem with the navigation between "youtube.com/shorts" and other parts of Youtube where either the bar is showing in regular Youtube or it's not showing in the Shorts section.
