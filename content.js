@@ -1,21 +1,3 @@
-// if (location.pathname.includes('/shorts')) {
-//   // You are on the YouTube Shorts site
-//   console.log('shorts');
-// } else {
-//   // You are on the main YouTube site
-//   console.log('main');
-// }
-
-// document.addEventListener('transitioned', function(e) {
-//   if (e.target.id === 'progress')
-//       // do stuff
-//       console.log('transitionend');
-// });
-
-// document.addEventListener('spfdone ', function(e) {
-//   console.log('spfdone');
-// });
-
 const timeBar = document.createElement("div");
 timeBar.id = "timeBar";
 timeBar.style.width = "100%";
@@ -76,17 +58,13 @@ setInterval(getTime, 100);
 
 
 window.addEventListener("yt-page-data-updated", function () {
-  console.log("yt-page-data-updated");
   //get page url
   var url = window.location.href;
-  console.log(url);
   if (url.includes("/shorts")) {
     // You are on the YouTube Shorts site
-    console.log("shorts");
     timeBar.style.display = "block";
   } else {
     // You are on the main YouTube site
-    console.log("main");
     timeBar.style.display = "none";
   }
 });
