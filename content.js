@@ -35,7 +35,26 @@ timeBar.addEventListener("mouseout", () => {
   timeBar.style.height = "10px";
 });
 
-timeBar.addEventListener("click", (e) => {
+let isDragging = false;
+
+timeBar.addEventListener("mousedown", (e) => {
+  isDragging = true;
+  pauseToggle(); //pause video when dragging
+  updateTimeBar(e);
+});
+
+timeBar.addEventListener("mousemove", (e) => {
+  if (isDragging) {
+    updateTimeBar(e);
+  }
+});
+
+timeBar.addEventListener("mouseup", () => {
+  isDragging = false;
+  pauseToggle(); //play video when not dragging
+});
+
+function updateTimeBar(e) {
   const ytShorts = document.querySelector(
     "#shorts-player > div.html5-video-container > video"
   );
@@ -43,7 +62,8 @@ timeBar.addEventListener("click", (e) => {
   const clickX = e.clientX - timeBar.getBoundingClientRect().left;
   const duration = ytShorts.duration;
   ytShorts.currentTime = (clickX / width) * duration;
-});
+  progress.style.width = `${(ytShorts.currentTime / duration) * 100}%`;
+}
 
 // make function that always returns the current time
 function getTime() {
@@ -68,3 +88,15 @@ window.addEventListener("yt-page-data-updated", function () {
     timeBar.style.display = "none";
   }
 });
+
+
+function pauseToggle(){
+  const ytShorts = document.querySelector(
+    "#shorts-player > div.html5-video-container > video"
+  );
+  if(ytShorts.paused){
+    ytShorts.play();
+  }else{
+    ytShorts.pause();
+  }
+}
